@@ -36,7 +36,7 @@ public class BcryptAuthenticator extends AbstractAuthenticator {
                 return new LdapPrincipal(
                         super.getDirectoryService().getSchemaManager(),
                         dn,
-                        AuthenticationLevel.SIMPLE);
+                        super.getAuthenticatorType());
             }
         }
         else if(LOG.isWarnEnabled()) {
